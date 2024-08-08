@@ -1,0 +1,26 @@
+[
+    {
+        "nomeProduto": "Mach Street Sweatshirt",
+        "tamanho": "XS",
+        "cor": "Blue",
+        "quantidade": 3
+    },
+    {
+        "nomeProduto": "Chaz Kangeroo Hoodie",
+        "tamanho": "L",
+        "cor": "Black",
+        "quantidade": 5
+    },
+    {
+        "nomeProduto": "Geo Insulated Jogging Pant",
+        "tamanho": "36",
+        "cor": "Red",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Apollo Running Short",
+        "tamanho": "36",
+        "cor": "Black",
+        "quantidade": 1
+    }
+]
