@@ -43,34 +43,34 @@ const example = require('../fixtures/example.json')
     }
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()  
-//    cy.visit('checkout')
+    //cy.visit('checkout')
 
 //      Preenchendo todas opções no checkout
         cy.fixture('example').then( dados => {
-        cy.get('#billing_first_name').clear().type(dados.nome, {log: false})
-        cy.get('#billing_last_name').clear().type(dados.sobrenome, {log: false})
-        cy.get('#billing_company').clear().type(dados.empresa, {log: false})
+        cy.get('#billing_first_name').clear().type(dados.nome, {log: true})
+        cy.get('#billing_last_name').clear().type(dados.sobrenome, {log: true})
+        cy.get('#billing_company').clear().type(dados.empresa, {log: true})
             // Selecionando o país.
         cy.get('#select2-billing_country-container').click()
-        cy.get('.select2-search__field').type(dados.país, {log: false}).type('{enter}')
+        cy.get('.select2-search__field').type(dados.país, {log: true}).type('{enter}')
             // Continuando o preenchimento.
-        cy.get('#billing_address_1').clear().type(dados.endereço1, {log: false})
-        cy.get('#billing_address_2').clear().type(dados.endereço2, {log: false})
-        cy.get('#billing_city').clear().type(dados.cidade, {log: false})
+        cy.get('#billing_address_1').clear().type(dados.endereço1, {log: true})
+        cy.get('#billing_address_2').clear().type(dados.endereço2, {log: true})
+        cy.get('#billing_city').clear().type(dados.cidade, {log: true})
             // Selecionando o Estado.
         cy.get('#select2-billing_state-container').click()
-        cy.get('.select2-search__field').type(dados.estado, {log: false}).type('{enter}')
+        cy.get('.select2-search__field').type(dados.estado, {log: true}).type('{enter}')
             // Continuando o preenchimento.
-        cy.get('#billing_postcode').clear().type(dados.cep, {log: false})
-        cy.get('#billing_phone').clear().type(dados.telefone, {log: false})
-        cy.get('#billing_email').clear().type(dados.email, {log: false})
-        cy.get('#order_comments').clear().type(dados.info, {log: false})
+        cy.get('#billing_postcode').clear().type(dados.cep, {log: true})
+        cy.get('#billing_phone').clear().type(dados.telefone, {log: true})
+        cy.get('#billing_email').clear().type(dados.email, {log: true})
+        cy.get('#order_comments').clear().type(dados.info, {log: true})
         // Aceitando os termos
         cy.get('#terms').click()
-        cy.get('#place_order').click()
-        
-        // Espera aumentada para validar a compra ao final
-        cy.wait(10000)
+        // forçando o carregamento:
+        cy.get('#place_order').click({force: true})
+        cy.get('.woocommerce-notice', { timeout: 10000 }).should('be.visible')
+        // Validando o pedido:
         cy.get('.woocommerce-notice').should('have.text', 'Obrigado. Seu pedido foi recebido.')
 
     })

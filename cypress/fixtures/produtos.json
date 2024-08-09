@@ -1,25 +1,25 @@
 [
     {
-        "nomeProduto": "Mach Street Sweatshirt",
+        "nomeProduto": "Ingrid Running Jacket",
         "tamanho": "XS",
-        "cor": "Blue",
-        "quantidade": 3
+        "cor": "Orange",
+        "quantidade": 1
     },
     {
-        "nomeProduto": "Chaz Kangeroo Hoodie",
+        "nomeProduto": "Erica Evercool Sports Bra",
         "tamanho": "L",
-        "cor": "Black",
-        "quantidade": 5
+        "cor": "Blue",
+        "quantidade": 1
     },
     {
-        "nomeProduto": "Geo Insulated Jogging Pant",
-        "tamanho": "36",
+        "nomeProduto": "Celeste Sports Bra",
+        "tamanho": "L",
         "cor": "Red",
-        "quantidade": 2
+        "quantidade": 1
     },
     {
-        "nomeProduto": "Apollo Running Short",
-        "tamanho": "36",
+        "nomeProduto": "Electra Bra Top",
+        "tamanho": "S",
         "cor": "Black",
         "quantidade": 1
     }
